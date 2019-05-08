@@ -1,3 +1,36 @@
+:root {
+  --cell-size: 100px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
-  background: #eee;
+  background: #000;
+  font-size: 16px;
+  color: #fff;
+}
+
+#game-container {
+  padding: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+}
+
+.map-tile {
+  position: relative;
+  width: var(--cell-size);
+  height: var(--cell-size);
+  background: url('../img/map-tile.png');
 }
